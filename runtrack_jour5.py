@@ -69,10 +69,9 @@ def job7():
     print(f"Il y a {len(l)} multiples de 3 dans cette liste.")
 job7()
 
-# Correction:
+# Correction du QCM:
 def job7():
     L = [8, 24, 48, 2, 16]
-    count = sum(1 for x in L if x % 3 == 0)
     count = len([x for x in L if x % 3 == 0])
     print(count)
 job7()
@@ -156,7 +155,7 @@ def job13():
     print(L)
 job13()
 
-# Correction:
+# Correction du QCM:
 def job13():
     L = [10, 20, 30, 20, 10, 50, 60, 40, 80, 50, 40]
     L = [x for i, x in enumerate(L) if x not in L[:i]]

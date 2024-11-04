@@ -92,8 +92,23 @@ job5(56, 25)
 # Job 6
 print("Job 6")
 
-
-
+def job6(*note):
+    note = list(note)
+    note_arrondi = []
+    for n in note:
+        if n < 0 or n > 100:
+            print("Erreur, la note doit être comprise entre 0 et 100.")
+        elif n >= 40 and n < 100:
+            for x in range(3):
+                if (n + x) % 5 == 0:
+                    n = n + x
+            print(f"Examen réussi avec une note de {n} sur 100.")
+            note_arrondi.append(n)
+        else:
+            print(f"Echec à l'examen avec une note de {n} sur 100.")
+            note_arrondi.append(n)
+    print(note_arrondi)
+job6(34, 40, 82, 83)
 
 # Job 8
 print("Job 8")
