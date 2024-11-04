@@ -51,6 +51,35 @@ job3(10)
 # Job 4
 print("Job 4")
 
+def job4(message, n):
+    import string
+    lowercase = string.ascii_lowercase
+    uppercase = string.ascii_uppercase
+    digit = string.digits
+    punctuation = string.punctuation
+    message = list(message)
+    new_message = []
+    for letter in message:
+        if letter == " ":
+            new_message.append(" ")
+        elif letter in uppercase:
+            x = uppercase.index(letter)
+            x = x + n
+            new_message.append(uppercase[x])
+        elif letter in lowercase:
+            x = lowercase.index(letter)
+            x = x + n
+            new_message.append(lowercase[x])
+        elif letter in digit:
+            x = digit.index(letter)
+            x = x + n
+            new_message.append(digit[x])
+        elif letter in punctuation:
+            x = punctuation.index(letter)
+            new_message.append(punctuation[x])
+    print("".join(new_message))
+job4("Ceci est un test.", 3)
+job4("Ca fonctionne !", 6)
 
 # Job 5
 print("Job 5")
