@@ -123,21 +123,15 @@ job11()
 
 # Job 12
 print("Job 12")
-# ça ne fonctionne pas pour le dernier item de la liste et je ne comprends pas pourquoi
-# la même méthode fonctionne pour une liste donnée (job 15)
-L = input("Entrez une liste de nombres entre virgule: ")
-L = L.split(",")
-def job12(L):
-    i = 0
-    while i < len(L):
+def job12(*L):
+    L = list(L)
+    for i in range(len(L)):
         j = i + 1
-        while j < len(L):
-            if L[i] > L[j]:
+        for j in range(len(L)):
+            if L[i] < L[j]:
                 L[i], L[j] = L[j], L[i]
-            j += 1
-        i += 1
     print(L)
-job12(L)
+job12(6, 8, 4, 2)
 
 # Job 13
 print("Job 13")

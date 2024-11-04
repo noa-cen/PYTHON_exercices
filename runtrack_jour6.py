@@ -112,3 +112,16 @@ job6(34, 40, 82, 83)
 
 # Job 8
 print("Job 8")
+
+def my_sort(*liste):
+    liste = list(liste)
+    count = 0
+    for i in range(len(liste)):
+        j = i + 1
+        for j in range(len(liste)):
+            if liste[i] < liste[j]:
+                liste[i], liste[j] = liste[j], liste[i]
+                count += 1
+    print(f"Nombre total de coups nécessaires pour trier la liste: {count}.")
+    print(f"Liste triée : {liste}.")
+my_sort(6, 8, 4, 2)
